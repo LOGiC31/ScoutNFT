@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-
+from supabase.client import supabase
 app = FastAPI()
 
 # Enable CORS to allow frontend to communicate with backend
@@ -19,3 +19,9 @@ class NFTRequest(BaseModel):
 @app.post("/recommend")
 def recommend(req: NFTRequest):
     return {"recommendations": [1, 2, 3]}
+
+
+@app.get("/nfts")
+async def get_nfts():
+    res = supabase.table("nfts").select("*").execute()
+    return res.data

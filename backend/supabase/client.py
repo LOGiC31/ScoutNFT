@@ -1,0 +1,11 @@
+# backend/supabase/client.py
+import os
+from supabase import create_client, Client
+from dotenv import load_dotenv
+
+load_dotenv()  # Load from .env file
+
+SUPABASE_URL: str = os.getenv("SUPABASE_URL")
+SUPABASE_KEY: str = os.getenv("SUPABASE_SERVICE_ROLE_KEY")
+
+supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
