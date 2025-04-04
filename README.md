@@ -34,8 +34,14 @@ git clone https://github.com/yourusername/ScoutNFT.git
 pip install -r requirements.txt
 ```
 
-3. Run the application
+3. Run the backend application
 
 ```bash
 uvicorn main:app --reload
+```
+
+3. Run the frontend application
+
+```bash
+npm run dev
 ```
