@@ -30,8 +30,11 @@ git clone https://github.com/yourusername/ScoutNFT.git
 
 2. Install the dependencies
 
+
 ```bash
-pip install -r requirements.txt
+python3 -m venv venv
+source venv/bin/activate
+pip3 install -r requirements.txt
 ```
 
 3. Run the backend application
@@ -43,5 +46,7 @@ uvicorn main:app --reload
 3. Run the frontend application
 
 ```bash
+cd frontend
+npm install
 npm run dev
 ```
