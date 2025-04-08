@@ -50,3 +50,8 @@ cd frontend
 npm install
 npm run dev
 ```
+
+4. 
+'''bash
+npm install react-icons
+'''
