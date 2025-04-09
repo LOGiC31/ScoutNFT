@@ -55,3 +55,9 @@ npm run dev
 '''bash
 npm install react-icons
 '''
+
+5.
+'''
+bash
+pip install b2sdk
+'''

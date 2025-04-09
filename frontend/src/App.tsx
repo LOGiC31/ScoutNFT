@@ -15,6 +15,7 @@ import nft9 from './assets/nft9.jpeg';
 import nft10 from './assets/nft10.jpeg';
 import nft12 from './assets/nft12.jpeg';
 import nft13 from './assets/nft13.jpeg';
+import NFTGallery from './components/NFTGallery'; // Import the new component
 
 function App() {
   const [user, setUser] = useState<User | null>(null);
@@ -71,6 +72,7 @@ function App() {
             <h2 className="welcome-title">Welcome, {user.email ? user.email : user.user_metadata?.name || "Scout"}!</h2>
             <p className="welcome-message">Explore the exciting world of digital collectibles.</p>
             <button className="logout-button" onClick={handleLogout}>Sign Out</button>
+            <NFTGallery /> {/* Render the NFT gallery after login */}
           </div>
         ) : (
           <div className="auth-container">

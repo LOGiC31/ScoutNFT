@@ -32,3 +32,4 @@ virtual-env/
 # Docker artifacts (optional)
 **/docker-compose.override.yml
 **/data/
+dataset/*
