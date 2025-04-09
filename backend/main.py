@@ -26,7 +26,7 @@ async def fetch_nfts():
     if not conn:
         raise HTTPException(status_code=500, detail="Could not connect to database")
 
-    nfts_data = await fetch_random_nfts(conn, limit=500)
+    nfts_data = await fetch_random_nfts(conn, limit=200)
     await close_db(conn)
 
     nfts = [NFT(name=name, image_path=url) for name, url in nfts_data]

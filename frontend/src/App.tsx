@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import supabase from './supabaseClient';
 import { User } from '@supabase/supabase-js';
 import './App.css';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaUserCircle } from 'react-icons/fa';
 import nft1 from './assets/nft11.jpeg';
 import nft2 from './assets/nft2.jpeg';
 import nft3 from './assets/nft3.jpeg';
@@ -15,7 +15,8 @@ import nft9 from './assets/nft9.jpeg';
 import nft10 from './assets/nft10.jpeg';
 import nft12 from './assets/nft12.jpeg';
 import nft13 from './assets/nft13.jpeg';
-import NFTGallery from './components/NFTGallery'; // Import the new component
+import NFTGallery from './components/NFTGallery';
+import logo from './assets/logo.png';
 
 function App() {
   const [user, setUser] = useState<User | null>(null);
@@ -63,16 +64,26 @@ function App() {
   return (
     <div className="app-container">
       <header className="app-header">
-        <h1 className="app-name">ScoutNFT</h1>
+        <div className="header-left">
+          <img src={logo} alt="ScoutNFT Logo" className="logo" />
+        </div>
+        <div className="header-right">
+          {user && (
+            <div className="user-menu">
+            <FaUserCircle className="user-icon" />
+            <div className="dropdown-menu">
+              <span className="dropdown-email">{user?.email || 'User'}</span>
+              <button onClick={handleLogout} className="dropdown-logout">Log out</button>
+            </div>
+          </div>
+          )}
+        </div>
       </header>
 
       <main className="main-content">
         {user ? (
           <div className="welcome-container">
-            <h2 className="welcome-title">Welcome, {user.email ? user.email : user.user_metadata?.name || "Scout"}!</h2>
-            <p className="welcome-message">Explore the exciting world of digital collectibles.</p>
-            <button className="logout-button" onClick={handleLogout}>Sign Out</button>
-            <NFTGallery /> {/* Render the NFT gallery after login */}
+            <NFTGallery />
           </div>
         ) : (
           <div className="auth-container">

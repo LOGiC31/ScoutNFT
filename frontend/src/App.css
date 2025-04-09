@@ -61,7 +61,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 3rem;
+  padding:0rem;
   background: linear-gradient(to bottom, var(--background-dark), #1a202c);
   position: relative;
 }
@@ -210,14 +210,14 @@ body {
 
 .auth-title {
   font-size: 2.5rem;
-  color: var(--accent-color);
+  color: #7ce8ed;
   font-weight: 700;
   font-family: var(--font-family-secondary);
   margin-bottom: 0.5rem;
 }
 
 .auth-subtitle {
-  color: var(--text-color-secondary);
+  color: #ffffff;
   font-size: 1rem;
   margin-bottom: 1.5rem;
 }
@@ -285,7 +285,6 @@ body {
   vertical-align: middle;
 }
 
-/* Add to App.css */
 .app-content {
   width: 100%;
   max-width: 1400px;
@@ -314,7 +313,6 @@ body {
   background-color: #e05d0a;
 }
 
-/* App.css (NFT Marketplace Theme - More Randomized Photos) */
 :root {
   --primary-color: #a855f7;
   --primary-hover: #9333ea;
@@ -370,6 +368,99 @@ body {
   font-weight: 700;
   letter-spacing: 0.8px;}
 
+  .app-header {
+    background-color: #282c34;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+  }
+  
+  .header-left {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+  }
+  
+  .logo {
+    height: 120px;
+    padding-top: 12px;
+  }
+
+  .logo_sign {
+    height: 140px;
+    padding-top: 12px;
+  }
+  
+  .app-name {
+    margin: 0;
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+  }
+  
+  .user-icon {
+    font-size: 28px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .user-icon:hover {
+    color: var(--accent-color);
+  }
+
+  .user-menu {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 35px;
+    right: 0;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+    min-width: 150px;
+    border-radius: 4px;
+  }
+  
+  .user-menu:hover .dropdown-menu {
+    display: flex;
+  }
+  
+  .dropdown-email {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 8px;
+    word-break: break-all;
+  }
+  
+  .dropdown-logout {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dropdown-logout:hover {
+    background-color: #d32f2f;
+  }
+
 @media (max-width: 768px) {
   .app-header {
     padding: 0.8rem 1.5rem;
@@ -381,7 +472,7 @@ body {
   }
 
   .main-content {
-    padding: 2rem;
+    padding: 0rem;
   }
 
   .auth-card {

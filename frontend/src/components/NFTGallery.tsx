@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './NFTGallery.css'; // Ensure this CSS file exists
+import './NFTGallery.css';
 
 interface NFT {
   name: string;
@@ -21,7 +21,7 @@ const NFTGallery: React.FC = () => {
         const data: NFT[] = await response.json();
         setNfts(data);
         setTotalImages(data.length);
-        setError(null); // Clear any previous error
+        setError(null);
       } catch (err: any) {
         console.error("Error fetching NFTs:", err);
         setError("Failed to load NFTs. Please try again later.");
@@ -34,7 +34,6 @@ const NFTGallery: React.FC = () => {
   return (
     <div className="nft-gallery-container">
       <h2>Explore Our NFTs</h2>
-      <p>Total Images: {totalImages}</p>
       {error && <p className="error-message">{error}</p>}
       <div className="nft-grid">
         {nfts.map((nft) => (
