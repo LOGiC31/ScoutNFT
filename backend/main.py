@@ -100,7 +100,7 @@ async def search_nfts(text_query: TextQuery):
     results = []
     for idx in top_indices:
         name = os.path.basename(paths[idx]).split(".")[0]
-        image_path = paths[idx]
+        image_path = paths[idx].replace(".png", ".jpg")
         image_path =  image_path.replace("/img/","/")
         results.append(NFT(name=name, image_path=image_path))
 
