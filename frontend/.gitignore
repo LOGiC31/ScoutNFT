@@ -23,3 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 public/dataset/*
+backend/database.py
+backend/model/clip_with_metadata.pt
+backend/model/nft_embeddings.npy
