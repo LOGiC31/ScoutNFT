@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './NFTGallery.css';
 
 interface NFT {
@@ -11,6 +12,7 @@ const NFTGallery: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   const fetchAllNFTs = async () => {
     try {
@@ -61,6 +63,10 @@ const NFTGallery: React.FC = () => {
     }
   };
 
+  const handleNFTClick = (nft: NFT) => {
+    navigate(`/nft/${encodeURIComponent(nft.name)}?img=${encodeURIComponent(nft.image_path)}`);
+  };
+
   return (
     <div className="nft-gallery-container">
       <h2>Explore Our NFTs</h2>
@@ -80,7 +86,12 @@ const NFTGallery: React.FC = () => {
 
       <div className="nft-grid">
         {nfts.map((nft) => (
-          <div key={nft.name} className="nft-item">
+          <div
+            key={nft.name}
+            className="nft-item"
+            onClick={() => handleNFTClick(nft)}
+            style={{ cursor: 'pointer' }}
+          >
             <h3>{nft.name}</h3>
             <img
               src={`/${nft.image_path}`}
