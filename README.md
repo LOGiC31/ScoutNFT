@@ -1,4 +1,5 @@
 # ScoutNFT
+
 NFT Recommendation System
 
 ## Overview
@@ -13,3 +14,56 @@ ScoutNFT is a platform that allows users to discover and collect NFTs. It provid
 - NFT collection management
 
 ## Technologies Used
+
+- Python
+- FastAPI
+- Supabase
+- React
+
+## Installation
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/yourusername/ScoutNFT.git
+```
+
+2. Install the dependencies
+
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip3 install -r requirements.txt
+```
+
+3. Run the backend application
+
+```bash
+uvicorn main:app --reload
+```
+
+3. Run the frontend application
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+4. 
+'''bash
+npm install react-icons
+'''
+
+5.
+'''
+bash
+pip install b2sdk
+'''
+
+5.
+'''
+bash
+npm install react-router-dom
+'''
