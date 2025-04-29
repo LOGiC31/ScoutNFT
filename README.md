@@ -51,17 +51,17 @@ npm install
 npm run dev
 ```
 
-4. 
+4. Install React Icons
 ```bash
 npm install react-icons
 ```
 
-5.
+5. Install b2sdk
 ```bash
 pip install b2sdk
 ```
 
-6.
+6. Install react router 
 ```bash
 npm install react-router-dom
 ```
