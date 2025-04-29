@@ -52,18 +52,20 @@ npm run dev
 ```
 
 4. 
-'''bash
+```bash
 npm install react-icons
-'''
+```
 
 5.
-'''
-bash
+```bash
 pip install b2sdk
-'''
+```
 
-5.
-'''
-bash
+6.
+```bash
 npm install react-router-dom
-'''
+```
+
+7. Download the dataset, embeddings, nft paths and .sql file from the drive link : https://drive.google.com/drive/folders/1m8QndzJHVl4U4GRjkPECMsi715dP7LvN?usp=sharing
+Place the dataset and .sql in root.
+Place the model files, embeddings and json files in backend/models
